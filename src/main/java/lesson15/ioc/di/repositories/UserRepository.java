@@ -2,25 +2,11 @@ package lesson15.ioc.di.repositories;
 
 import lesson15.ioc.di.models.User;
 
-import java.util.*;
+import java.util.Set;
+import java.util.UUID;
 
-public class UserRepository {
-    private final Map<UUID, User> uuidUserMap;
-
-    public UserRepository() {
-        this.uuidUserMap = new HashMap<>();
-    }
-
-    public User findByID(UUID id){
-        return  uuidUserMap.get(id);
-    }
-
-    public User save(User user){
-        uuidUserMap.put(user.getId(),user);
-        return user;
-    }
-
-    public Set<User> findAll(){
-        return new HashSet<>(uuidUserMap.values());
-    }
+public interface UserRepository {
+    User findByID(UUID id);
+    User save(User user);
+    Set<User> findAll();
 }
