@@ -1,6 +1,6 @@
-package lesson15.ioc.di.repositories;
+package lesson15.app.repositories;
 
-import lesson15.ioc.di.models.User;
+import lesson15.app.models.User;
 
 import java.util.Set;
 import java.util.UUID;

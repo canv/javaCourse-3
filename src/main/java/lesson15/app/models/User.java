@@ -1,4 +1,4 @@
-package lesson15.ioc.di.models;
+package lesson15.app.models;
 
 import lombok.*;
 
