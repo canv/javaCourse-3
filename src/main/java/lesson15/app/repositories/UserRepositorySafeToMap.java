@@ -1,12 +1,13 @@
-package lesson15.ioc.di.repositories;
+package lesson15.app.repositories;
 
+import lesson15.app.models.User;
 import lesson15.framework.annotations.Component;
-import lesson15.ioc.di.models.User;
 
 import java.util.*;
 
 @Component
 public class UserRepositorySafeToMap implements UserRepository {
+
     private final Map<UUID, User> uuidUserMap;
 
     public UserRepositorySafeToMap() {

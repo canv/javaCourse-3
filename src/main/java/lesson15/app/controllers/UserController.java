@@ -1,6 +1,6 @@
-package lesson15.ioc.di.controllers;
+package lesson15.app.controllers;
 
-import lesson15.ioc.di.models.User;
+import lesson15.app.models.User;
 
 public interface UserController {
     String getUserByID(String id);
