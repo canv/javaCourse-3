@@ -29,23 +29,15 @@ public class UserControllerIDETest {
         User user2 = new User("user2", "pass2");
         User user3 = new User("user3", "pass3");
 
-        Set<User> users = new HashSet<>();
-        users.add(userID);
-        users.add(user1);
-        users.add(user2);
-        users.add(user3);
-        String usersStr = users.stream()
-                .map(User::toString)
-                .collect(Collectors.joining(", "));
-
-        System.out.println(usersStr);
-
-        userController.safeUser(userID);
-        userController.safeUser(user1);
-        userController.safeUser(user2);
-        userController.safeUser(user3);
+        assertThat(userID.toString(),is(userController.safeUser(userID)));
+        assertThat(user1.toString(),is(userController.safeUser(user1)));
+        assertThat(user2.toString(),is(userController.safeUser(user2)));
+        assertThat(user3.toString(),is(userController.safeUser(user3)));
 
         assertThat(userController.getUserByID(uuid.toString()), is(userID.toString()));
-        assertThat(usersStr, is(userController.getAllUsers()));
+        assertThat(userController.getAllUsers().contains(userID.toString()), is(true));
+        assertThat(userController.getAllUsers().contains(user1.toString()), is(true));
+        assertThat(userController.getAllUsers().contains(user2.toString()), is(true));
+        assertThat(userController.getAllUsers().contains(user3.toString()), is(true));
     }
 }
