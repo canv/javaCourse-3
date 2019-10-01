@@ -4,17 +4,24 @@ import lesson15.framework.annotations.Component;
 import lesson15.framework.annotations.Inject;
 import lesson15.app.models.User;
 import lesson15.app.services.UserService;
-import lombok.AllArgsConstructor;
+import lesson15.framework.annotations.TestAnnotation;
 import lombok.NoArgsConstructor;
 
 import java.util.stream.Collectors;
 
 @Component
-@AllArgsConstructor
-@NoArgsConstructor
+
+//@NoArgsConstructor
 public class UserControllerIDE implements UserController {
 
+
     @Inject
+    @TestAnnotation
+    public UserControllerIDE(UserService service) {
+        this.service = service;
+    }
+
+    //@Inject
     private UserService service;
 
     @Override
@@ -32,6 +39,6 @@ public class UserControllerIDE implements UserController {
     public String getAllUsers() {
         return service.getAll().stream()
                 .map(User::toString)
-                .collect(Collectors.joining(", "));
+                .collect(Collectors.joining("\n"));
     }
 }

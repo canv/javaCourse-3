@@ -1,16 +1,10 @@
 package lesson15.app.controllers;
 
-import lesson15.app.models.User;
-import lesson15.app.repositories.UserRepository;
-import lesson15.app.repositories.UserRepositorySafeToMap;
-import lesson15.app.services.UserService;
-import lesson15.app.services.UserServiceFirstImplements;
+import lesson15.app.models.*;
+import lesson15.app.repositories.*;
+import lesson15.app.services.*;
 import org.junit.Test;
-
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
