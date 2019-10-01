@@ -7,5 +7,5 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD, ElementType.CONSTRUCTOR, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Inject {
+public @interface TestAnnotation {
 }

@@ -1,15 +1,10 @@
 package lesson15.app.controllers;
 
-import lesson15.app.exceptions.IllegalIDException;
-import lesson15.app.exceptions.IllegalPasswordException;
-import lesson15.app.exceptions.IllegalUsernameException;
+import lesson15.app.exceptions.*;
 import lesson15.app.models.User;
-import lesson15.app.repositories.UserRepository;
-import lesson15.app.repositories.UserRepositorySafeToMap;
-import lesson15.app.services.UserService;
-import lesson15.app.services.UserServiceFirstImplements;
-import org.junit.Rule;
-import org.junit.Test;
+import lesson15.app.repositories.*;
+import lesson15.app.services.*;
+import org.junit.*;
 import org.junit.rules.ExpectedException;
 
 public class UserControllerIDEExceptionsTest {

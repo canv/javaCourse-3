@@ -1,20 +1,13 @@
 package lesson15.app.services;
 
 import com.google.common.base.Strings;
-import lesson15.app.exceptions.IllegalPasswordException;
-import lesson15.app.exceptions.IllegalUsernameException;
-import lesson15.app.exceptions.UserNotFoundException;
-import lesson15.app.exceptions.IllegalIDException;
-import lesson15.app.models.User;
-import lesson15.framework.annotations.Component;
-import lesson15.framework.annotations.Inject;
 import lesson15.app.repositories.UserRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lesson15.app.exceptions.*;
+import lesson15.app.models.User;
+import lesson15.framework.annotations.*;
+import lombok.*;
 
-import java.util.Objects;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 @Component
 @AllArgsConstructor
