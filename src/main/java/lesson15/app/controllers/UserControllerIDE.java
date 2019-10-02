@@ -1,28 +1,21 @@
 package lesson15.app.controllers;
 
-import lesson15.framework.annotations.Component;
-import lesson15.framework.annotations.Inject;
-import lesson15.app.models.User;
-import lesson15.app.services.UserService;
-import lesson15.framework.annotations.TestAnnotation;
+import lesson15.framework.annotations.*;
+import lesson15.app.models.*;
+import lesson15.app.services.*;
 import lombok.NoArgsConstructor;
 
 import java.util.stream.Collectors;
 
-@Component
-
-//@NoArgsConstructor
+@Component(3)
+@NoArgsConstructor
 public class UserControllerIDE implements UserController {
-
+    private UserService service;
 
     @Inject
-    @TestAnnotation
-    public UserControllerIDE(UserService service) {
+    UserControllerIDE(UserService service) {
         this.service = service;
     }
-
-    //@Inject
-    private UserService service;
 
     @Override
     public String getUserByID(String id) {
