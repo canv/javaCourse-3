@@ -1,7 +1,7 @@
 package lesson15.app.controllers;
 
 import lesson15.app.exceptions.*;
-import lesson15.app.models.User;
+import lesson15.app.models.*;
 import lesson15.app.repositories.*;
 import lesson15.app.services.*;
 import org.junit.*;
